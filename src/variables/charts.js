@@ -166,6 +166,64 @@ const dashboardEmailStatisticsChart = {
   },
 };
 
+const dashboardEmotionsChart = {
+  data: {
+    labels: [
+        "January 30",
+        "January 29",
+        "January 28",
+        "January 27",
+        "January 26",
+        "January 25",
+        "January 24",
+        "January 23",
+      ],
+    datasets: [
+      {
+        //happy
+        data: [1,1,7,0,0,2,1,1],
+        fill: false,
+        borderColor: "#6bd098",
+        backgroundColor: "transparent",
+        pointBorderColor: "#6bd098",
+        pointRadius: 4,
+        pointHoverRadius: 4,
+        pointBorderWidth: 8,
+      },
+      //neutral
+      {
+        data: [0,0,7,0,0,5,4,2],
+        fill: false,
+        borderColor: "#fcc468",
+        backgroundColor: "transparent",
+        pointBorderColor: "#fcc468",
+        pointRadius: 4,
+        pointHoverRadius: 4,
+        pointBorderWidth: 8,
+      },
+      //sad
+      {
+        data: [0,0,0,0,0,1,0,0],
+        fill: false,
+        borderColor: "#f17e5d",
+        backgroundColor: "transparent",
+        pointBorderColor: "#f17e5d",
+        pointRadius: 4,
+        pointHoverRadius: 4,
+        pointBorderWidth: 8,
+      },
+    ],
+  },
+  options: {
+    legend: {
+      display: false,
+      position: "top",
+    },
+  },
+};
+
+
+
 const dashboardNASDAQChart = {
   data: {
     labels: [
@@ -213,8 +271,11 @@ const dashboardNASDAQChart = {
   },
 };
 
+
+
 module.exports = {
   dashboard24HoursPerformanceChart,
   dashboardEmailStatisticsChart,
   dashboardNASDAQChart,
+  dashboardEmotionsChart,
 };
