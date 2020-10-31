@@ -35,6 +35,7 @@ import {
   dashboardEmailStatisticsChart,
   dashboardNASDAQChart,
 } from "variables/charts.js";
+import {dashboardEmotionsChart} from "../variables/charts";
 
 class Dashboard extends React.Component {
   render() {
@@ -222,6 +223,32 @@ class Dashboard extends React.Component {
                     <i className="fa fa-check" /> Data information certified
                   </div>
                 </CardFooter>
+
+                <Row>
+                  <Col md="12">
+                    <Card>
+                <CardHeader>
+                  <CardTitle tag="h5">Users Emotions</CardTitle>
+                  <p className="card-category">Current Emotion Readings</p>
+                </CardHeader>
+                <CardBody>
+                  <Line
+                      data={dashboardEmotionsChart.data}
+                      options={dashboardEmotionsChart.options}
+                      width={400}
+                      height={100}
+                  />
+                </CardBody>
+                  <CardFooter>
+                    <hr />
+                    <div className="stats">
+                      <i className="fa fa-history" /> Updated 3 minutes ago
+                    </div>
+                  </CardFooter>
+                    </Card>
+                  </Col>
+                </Row>
+
               </Card>
             </Col>
           </Row>
