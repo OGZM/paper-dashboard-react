@@ -188,9 +188,9 @@ const dashboardEmotionsChart = {
           borderColor: "#6bd098",
           backgroundColor: "transparent",
           pointBorderColor: "#6bd098",
-          pointRadius: 4,
-          pointHoverRadius: 4,
-          borderWidth: 8,
+          pointRadius: 1,
+          pointHoverRadius: 1,
+          borderWidth: 4,
         },
         //neutral
         {
@@ -199,9 +199,9 @@ const dashboardEmotionsChart = {
           borderColor: "#fcc468",
           backgroundColor: "transparent",
           pointBorderColor: "#fcc468",
-          pointRadius: 4,
-          pointHoverRadius: 4,
-          borderWidth: 8,
+          pointRadius: 1,
+          pointHoverRadius: 1,
+          borderWidth: 4,
         },
         //sad
         {
@@ -210,9 +210,9 @@ const dashboardEmotionsChart = {
           borderColor: "#f17e5d",
           backgroundColor: "transparent",
           pointBorderColor: "#f17e5d",
-          pointRadius: 4,
-          pointHoverRadius: 4,
-          borderWidth: 8,
+          pointRadius: 1,
+          pointHoverRadius: 1,
+          borderWidth: 4,
         },
       ],
     };
