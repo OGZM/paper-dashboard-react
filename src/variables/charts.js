@@ -168,64 +168,66 @@ const dashboardEmailStatisticsChart = {
 };
 
 const dashboardEmotionsChart = {
+
   data: (canvas) => {
     return {
       labels: [
-        "January 30",
-        "January 29",
-        "January 28",
-        "January 27",
-        "January 26",
-        "January 25",
-        "January 24",
         "January 23",
+        "January 24",
+        "January 25",
+        "January 26",
+        "January 27",
+        "January 28",
+        "January 29",
+        "January 30",
       ],
       datasets: [
         {
-          //happy
+          label: "Happy",
           data: [1,1,7,0,0,2,1,1],
-          fill: false,
-          borderColor: "#6bd098",
-          backgroundColor: "transparent",
-          pointBorderColor: "#6bd098",
-          pointRadius: 1,
+          fill: true,
+          borderColor: "#33cc33",
+          backgroundColor: (opacity = 0.1) => "#91fd91",
+          pointBorderColor: "#33cc33",
+          pointRadius: 2,
           pointHoverRadius: 1,
-          borderWidth: 4,
+          borderWidth: 1,
+          fillOpacity: 0.3,
         },
-        //neutral
         {
+          label: "Neutral",
           data: [0,0,7,0,0,5,4,2],
-          fill: false,
-          borderColor: "#fcc468",
-          backgroundColor: "transparent",
-          pointBorderColor: "#fcc468",
-          pointRadius: 1,
+          fill: true,
+          borderColor: "#ecec22",
+          backgroundColor: (opacity = 0.1) => "#ffff5c",
+          pointBorderColor: "#ecec22",
+          pointRadius: 2,
           pointHoverRadius: 1,
-          borderWidth: 4,
+          borderWidth: 1,
+          fillOpacity: 0.3,
         },
-        //sad
         {
+          label: "Sad",
           data: [0,0,0,0,0,1,0,0],
-          fill: false,
-          borderColor: "#f17e5d",
-          backgroundColor: "transparent",
-          pointBorderColor: "#f17e5d",
-          pointRadius: 1,
+          fill: true,
+          borderColor: "#f00f0f",
+          pointBorderColor: "#f00f0f",
+          backgroundColor: (opacity = 0.1) => "#ffadad",
+          pointRadius: 2,
           pointHoverRadius: 1,
-          borderWidth: 4,
+          borderWidth: 1,
+          fillOpacity: 0.3,
         },
       ],
     };
-
   },
-
   options: {
     legend: {
-      display: false,
+      display: true,
     },
 
     tooltips: {
-      enabled: false,
+      enabled: true,
     },
 
     scales: {
@@ -233,14 +235,13 @@ const dashboardEmotionsChart = {
         {
           ticks: {
             fontColor: "#9f9f9f",
-            beginAtZero: false,
+            beginAtZero: true,
             maxTicksLimit: 5,
-            //padding: 20
           },
           gridLines: {
-            drawBorder: false,
-            zeroLineColor: "#ccc",
-            color: "rgba(255,255,255,0.05)",
+            drawBorder: true,
+            zeroLineColor: "#5d5d5d",
+            color: "rgba(117,117,117,0.1)",
           },
         },
       ],
@@ -249,10 +250,10 @@ const dashboardEmotionsChart = {
         {
           barPercentage: 1.6,
           gridLines: {
-            drawBorder: false,
-            color: "rgba(255,255,255,0.1)",
-            zeroLineColor: "transparent",
-            display: false,
+            drawBorder: true,
+            color: "rgba(117,117,117,0.1)",
+            zeroLineColor: "#5d5d5d",
+            display: true,
           },
           ticks: {
             padding: 20,

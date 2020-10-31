@@ -226,7 +226,6 @@ class Dashboard extends React.Component {
               </Card>
             </Col>
           </Row>
-          <Card>
             <Row>
               <Col md="12">
                 <Card>
@@ -242,16 +241,9 @@ class Dashboard extends React.Component {
                         height={100}
                     />
                   </CardBody>
-                  <CardFooter>
-                    <hr />
-                    <div className="stats">
-                      <i className="fa fa-history" /> Updated 3 minutes ago
-                    </div>
-                  </CardFooter>
                 </Card>
               </Col>
             </Row>
-          </Card>
         </div>
       </>
     );
