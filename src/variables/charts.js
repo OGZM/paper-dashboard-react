@@ -167,8 +167,9 @@ const dashboardEmailStatisticsChart = {
 };
 
 const dashboardEmotionsChart = {
-  data: {
-    labels: [
+  data: (canvas) => {
+    return {
+      labels: [
         "January 30",
         "January 29",
         "January 28",
@@ -178,46 +179,86 @@ const dashboardEmotionsChart = {
         "January 24",
         "January 23",
       ],
-    datasets: [
-      {
-        //happy
-        data: [1,1,7,0,0,2,1,1],
-        fill: false,
-        borderColor: "#6bd098",
-        backgroundColor: "transparent",
-        pointBorderColor: "#6bd098",
-        pointRadius: 4,
-        pointHoverRadius: 4,
-        pointBorderWidth: 8,
-      },
-      //neutral
-      {
-        data: [0,0,7,0,0,5,4,2],
-        fill: false,
-        borderColor: "#fcc468",
-        backgroundColor: "transparent",
-        pointBorderColor: "#fcc468",
-        pointRadius: 4,
-        pointHoverRadius: 4,
-        pointBorderWidth: 8,
-      },
-      //sad
-      {
-        data: [0,0,0,0,0,1,0,0],
-        fill: false,
-        borderColor: "#f17e5d",
-        backgroundColor: "transparent",
-        pointBorderColor: "#f17e5d",
-        pointRadius: 4,
-        pointHoverRadius: 4,
-        pointBorderWidth: 8,
-      },
-    ],
+      datasets: [
+        {
+          //happy
+          data: [1,1,7,0,0,2,1,1],
+          fill: false,
+          borderColor: "#6bd098",
+          backgroundColor: "transparent",
+          pointBorderColor: "#6bd098",
+          pointRadius: 4,
+          pointHoverRadius: 4,
+          borderWidth: 8,
+        },
+        //neutral
+        {
+          data: [0,0,7,0,0,5,4,2],
+          fill: false,
+          borderColor: "#fcc468",
+          backgroundColor: "transparent",
+          pointBorderColor: "#fcc468",
+          pointRadius: 4,
+          pointHoverRadius: 4,
+          borderWidth: 8,
+        },
+        //sad
+        {
+          data: [0,0,0,0,0,1,0,0],
+          fill: false,
+          borderColor: "#f17e5d",
+          backgroundColor: "transparent",
+          pointBorderColor: "#f17e5d",
+          pointRadius: 4,
+          pointHoverRadius: 4,
+          borderWidth: 8,
+        },
+      ],
+    };
+
   },
+
   options: {
     legend: {
       display: false,
-      position: "top",
+    },
+
+    tooltips: {
+      enabled: false,
+    },
+
+    scales: {
+      yAxes: [
+        {
+          ticks: {
+            fontColor: "#9f9f9f",
+            beginAtZero: false,
+            maxTicksLimit: 5,
+            //padding: 20
+          },
+          gridLines: {
+            drawBorder: false,
+            zeroLineColor: "#ccc",
+            color: "rgba(255,255,255,0.05)",
+          },
+        },
+      ],
+
+      xAxes: [
+        {
+          barPercentage: 1.6,
+          gridLines: {
+            drawBorder: false,
+            color: "rgba(255,255,255,0.1)",
+            zeroLineColor: "transparent",
+            display: false,
+          },
+          ticks: {
+            padding: 20,
+            fontColor: "#9f9f9f",
+          },
+        },
+      ],
     },
   },
 };
